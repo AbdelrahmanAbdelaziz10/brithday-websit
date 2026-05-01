@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import HitHeart from "../assets/images/hearthead2.mp4";
 
-export default function LoveQuestion({ onYes, onNo }) {
+export default function LoveQuestion({ onYes, onNo ,title , image , stage ,setStage }) {
   return (
+        <AnimatePresence>
+
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -26,14 +28,17 @@ export default function LoveQuestion({ onYes, onNo }) {
           drop-shadow-[0_2px_6px_rgba(0,0,0,0.1)]
         "
       >
-        Are you ready for surprise? 
+        {title}
       </motion.h2>
 
       {/* Image */}
-<video autoPlay loop muted playsInline className="w-80 mb-8 ">
-
-  <source src={HitHeart} type="video/mp4" />
-</video>
+{image.endsWith(".mp4") ? (
+  <video autoPlay loop muted playsInline className="w-80 mb-8">
+    <source src={image} type="video/mp4" />
+  </video>
+) : (
+  <img src={image} alt="reaction" className="w-80 mb-8" />
+)}
 
       {/* Buttons */}
       <motion.div
@@ -42,12 +47,14 @@ export default function LoveQuestion({ onYes, onNo }) {
         transition={{ delay: 0.6 }}
         className="flex gap-25"
       >
-        {/* YES */}
+        {/* YES and NO buttons will go here */  
+        stage === "question" ? (
+          <> {/* YES */}
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={onYes}
-          className="bg-[#6fa8dc] text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#5c94cc] transition font-semibold"
+          className="bg-[#6fa8dc] cursor-pointer  text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#5c94cc] transition font-semibold"
         >
           YES
         </motion.button>
@@ -57,11 +64,26 @@ export default function LoveQuestion({ onYes, onNo }) {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={onNo}
-          className="bg-[#6fa8dc] text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#5c94cc] transition font-semibold"
+          className="bg-[#6fa8dc] cursor-pointer text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#5c94cc] transition font-semibold"
         >
           NO
         </motion.button>
+        </>
+        ):(
+           <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setStage("question")}
+          className="bg-[#6fa8dc] text-2xl cursor-pointer underline text-white px-8 py-2 rounded-full shadow-xl  hover:bg-[#5c94cc] transition font-semibold"
+        >
+          Try Again
+        </motion.button>
+
+        )
+        }
+       
       </motion.div>
     </motion.div>
+        </AnimatePresence>
   );
 }

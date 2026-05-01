@@ -6,6 +6,8 @@ import FloatingBubbles from "../components/FloatingBubbles";
 import Keypad from "../components/Keypad";
 import LoveQuestion from "../components/LoveQuestion";
 import { useState, useEffect } from "react";
+import HitHeart from "../assets/images/hearthead2.mp4";
+import Angrey from "../assets/images/HowDareYou.gif";
 
 export default function MainPage() {
   const { passcode, isUnlocked, handleClick } = usePasscode();
@@ -29,8 +31,22 @@ useEffect(() => {
 />
 {stage === "question" && (
   <LoveQuestion
+  title = "Are you ready for surprise?"
+  image = {HitHeart}
     onYes={() => setStage("final")}
-    onNo={() => alert("😏 مفيش NO")}
+    onNo={() => setStage("angrey")}
+    stage={stage}
+    setStage={setStage}
+  />
+)}
+{stage === "angrey" && (
+  <LoveQuestion
+  title = "How Dare You Say No! "
+  image = {Angrey}
+    onYes={() => setStage("final")}
+    onNo={() => setStage("angrey")}
+    stage={stage}
+    setStage={setStage}
   />
 )}
       <div className="flex flex-col md:flex-row items-center gap-12">
