@@ -54,11 +54,14 @@ useEffect(() => {
 <ImageCard isUnlocked={stage === "unlocked"} />
 
         <div className="text-center text-white">
-          <h2 className="text-2xl mb-8 font-bold">
-            Enter Passcode 🔐
+          <h2 className="text-4xl mb-15 font-bold">
+          Sara Enter Passcode 
           </h2>
+          <p  className="text-1xl mb-80">
+            The passcode is the Spicial Date between us (DDMMYY).
+          </p>
 
-          <PasscodeBox passcode={passcode} />
+          <PasscodeBox passcode={passcode} className="mt-15" />
 
           <Keypad onClick={handleClick} />
         </div>

@@ -18,11 +18,11 @@ export default function usePasscode() {
     setPasscode((prev) => {
       const updated = prev + num;
 
-      if (updated.length === 8) {
+      if (updated.length === 6) {
         setTimeout(() => setIsUnlocked(true), 400);
       }
 
-      return updated.length <= 8 ? updated : prev;
+      return updated.length <= 6 ? updated : prev;
     });
   };
 
