@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import HappyBrithday from "../assets/images/happybrithday.gif";
 
-export default function BirthdayOverlay({ isUnlocked }) {
+export default function BirthdayOverlay({ isUnlocked, onNext }) {
   return (
     <AnimatePresence>
       {isUnlocked && (
@@ -22,12 +22,14 @@ export default function BirthdayOverlay({ isUnlocked }) {
             />
 
             <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="bg-black text-white px-10 py-3 rounded-full font-semibold shadow-2xl"
-            >
-              NEXT →
-            </motion.button>
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.9 }}
+  onClick={onNext}
+  className="bg-black text-white px-10 py-3 rounded-full font-semibold shadow-2xl"
+>
+  NEXT →
+</motion.button>
+
           </motion.div>
         </motion.div>
       )}
