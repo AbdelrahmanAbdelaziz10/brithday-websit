@@ -5,7 +5,7 @@ import BirthdayOverlay from "../components/BirthdayOverlay";
 import FloatingBubbles from "../components/FloatingBubbles";
 import Keypad from "../components/Keypad";
 import LoveQuestion from "../components/LoveQuestion";
-import GiftPage from "../components/GiftPage";
+import GiftPage from "../components/Gifs/GiftPage";
 import { useState, useEffect } from "react";
 import HitHeart from "../assets/images/hearthead2.mp4";
 import Angrey from "../assets/images/HowDareYou.gif";
