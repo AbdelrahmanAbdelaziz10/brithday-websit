@@ -3,28 +3,55 @@ import { useState } from "react";
 export default function usePasscode() {
   const [passcode, setPasscode] = useState("");
   const [isUnlocked, setIsUnlocked] = useState(false);
+  const [error, setError] = useState(false);
+
+  const correctPasscode = "230525";
 
   const handleDelete = () => {
     if (isUnlocked) return;
+
     setPasscode((prev) => prev.slice(0, -1));
   };
 
   const handleClick = (num) => {
     if (isUnlocked) return;
 
-    if (num === "#") return handleDelete();
+    if (num === "#") {
+      return handleDelete();
+    }
+
     if (typeof num !== "number") return;
 
+    setError(false);
+
     setPasscode((prev) => {
-      const updated = prev + num;
+      if (prev.length >= 6) return prev;
 
-      if (updated.length === 6) {
-        setTimeout(() => setIsUnlocked(true), 400);
-      }
-
-      return updated.length <= 6 ? updated : prev;
+      return prev + num;
     });
   };
 
-  return { passcode, isUnlocked, handleClick };
+  const handleSubmit = () => {
+    if (passcode === correctPasscode) {
+      setTimeout(() => {
+        setIsUnlocked(true);
+      }, 300);
+    } else {
+      setError(true);
+    }
+  };
+
+  const handleTryAgain = () => {
+    setPasscode("");
+    setError(false);
+  };
+
+  return {
+    passcode,
+    isUnlocked,
+    error,
+    handleClick,
+    handleSubmit,
+    handleTryAgain,
+  };
 }

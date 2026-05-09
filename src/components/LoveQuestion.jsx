@@ -20,7 +20,7 @@ export default function LoveQuestion({ onYes, onNo ,title , image , stage ,setSt
           font-[Nunito]
           !text-[28px] md:!text-[34px]
           !font-extrabold
-          !text-[#6fa8dc]
+          !text-[#e77d8e]
           text-center
           mb-6
           leading-[1.4]
@@ -54,7 +54,7 @@ export default function LoveQuestion({ onYes, onNo ,title , image , stage ,setSt
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={onYes}
-          className="bg-[#6fa8dc] cursor-pointer  text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#5c94cc] transition font-semibold"
+          className="bg-[#e77d8e] cursor-pointer  text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#d98c99] transition font-semibold"
         >
           YES
         </motion.button>
@@ -64,7 +64,7 @@ export default function LoveQuestion({ onYes, onNo ,title , image , stage ,setSt
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={onNo}
-          className="bg-[#6fa8dc] cursor-pointer text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#5c94cc] transition font-semibold"
+          className="bg-[#e77d8e] cursor-pointer text-white px-8 py-2 rounded-full shadow-xl hover:bg-[#d98c99] transition font-semibold"
         >
           NO
         </motion.button>
@@ -74,7 +74,7 @@ export default function LoveQuestion({ onYes, onNo ,title , image , stage ,setSt
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setStage("question")}
-          className="bg-[#6fa8dc] text-2xl cursor-pointer underline text-white px-8 py-2 rounded-full shadow-xl  hover:bg-[#5c94cc] transition font-semibold"
+          className="bg-[#e77d8e] text-2xl cursor-pointer underline text-white px-8 py-2 rounded-full shadow-xl  hover:bg-[#d98c99] transition font-semibold"
         >
           Try Again
         </motion.button>
