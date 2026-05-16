@@ -64,7 +64,7 @@ export default function BirthdayCakeScreen({ onBack }) {
           animate={step >= 1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
           className="block text-white text-center drop-shadow-md"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(38px,7vw,68px)" }}
+          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(38px,7vw,68px)" , marginBottom: "3rem" }}
         >
           Happy Birthday
         </motion.span>
@@ -73,7 +73,7 @@ export default function BirthdayCakeScreen({ onBack }) {
           animate={step >= 2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
           className="block text-white text-center drop-shadow-md my-2"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(38px,7vw,68px)" }}
+          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(38px,7vw,68px)", marginBottom: "3rem" }}
         >
           My Angel 💕
         </motion.span>
