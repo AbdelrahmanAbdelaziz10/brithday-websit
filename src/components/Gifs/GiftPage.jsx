@@ -4,6 +4,7 @@ import GiftBox from "../../assets/images/gift.png";
 import {surprises} from "./data";
 import BirthdayCakeScreen from "./BirthdayCakeScreen";
 import LoveLetterScreen from "./LoveLetterScreen";
+import MissUsScreen from "./MissUsScreen";
 // ─── Surprise data for gift 2 ───────────────────────────────────────────────
 // const surprises = {
 //   2: {
@@ -472,7 +473,7 @@ export default function GiftPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="absolute inset-0 z-50 bg-[#fdfdfd] flex flex-col items-center justify-center overflow-hidden px-4"
+      className="absolute inset-0 z-50 bg-[#fdfdfd] flex flex-col items-center justify-center overflow-hidden "
     >
       <div className="absolute top-[-150px] w-[500px] h-[500px] bg-[#6fa8dc]/10 rounded-full blur-3xl" />
 
@@ -483,13 +484,21 @@ export default function GiftPage() {
           <BirthdayCakeScreen key="cake" onBack={() => setOpenedGift(null)} />
         )}
 
+{/* Gift 2 → Miss Us */}
+{openedGift === 2 && (
+  <MissUsScreen
+    key="missus"
+    onBack={() => setOpenedGift(null)}
+  />
+)}
+
         {/* Gift 3 → Love Letter */}
         {openedGift === 3 && (
           <LoveLetterScreen key="letter" onBack={() => setOpenedGift(null)} />
         )}
 
         {/* Gift 2 → Card */}
-        {openedGift === 2 && (
+        {/* {openedGift === 2 && (
           <motion.div
             key="card-2"
             initial={{ scale: 0.2, opacity: 0, rotate: -15 }}
@@ -538,7 +547,7 @@ export default function GiftPage() {
               </motion.button>
             </div>
           </motion.div>
-        )}
+        )} */}
 
         {/* Home screen */}
         {!openedGift && (

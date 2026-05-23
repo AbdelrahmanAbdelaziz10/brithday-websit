@@ -5,7 +5,7 @@ export default function usePasscode() {
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [error, setError] = useState(false);
 
-  const correctPasscode = "230525";
+  const correctPasscode = "23/525";
 
   const handleDelete = () => {
     if (isUnlocked) return;
@@ -20,7 +20,7 @@ export default function usePasscode() {
       return handleDelete();
     }
 
-    if (typeof num !== "number") return;
+if (num !== "/" && typeof num !== "number") return;
 
     setError(false);
 
