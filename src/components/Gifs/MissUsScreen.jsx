@@ -6,7 +6,7 @@ import BackImage from "../../assets/images/kiss.png";
 
 export default function MissUsScreen({ onBack }) {
   const [currentWord, setCurrentWord] = useState(0);
-const isMobile = window.innerWidth < 768;
+const isMobile = window.innerWidth < 868;
   const words = ["I", "MISS", "US", "TOGETHER"];
 
   const photos = [
@@ -39,29 +39,38 @@ const isMobile = window.innerWidth < 768;
 
   return (
     <div
-      style={{
-        position: "relative",
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-justifyContent: isMobile ? "flex-start" : "center",
-padding: isMobile ? "80px 16px" : "120px",
-        boxSizing: "border-box",
-        fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
-      }}
+     style={{
+  position: "relative",
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: isMobile ? "flex-start" : "center",
+  padding: isMobile ? "80px 16px" : "120px",
+  boxSizing: "border-box",
+  fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
+
+  // ✅ التعديل هنا
+  height: isMobile ? "auto" : "100vh",
+  minHeight: "100vh",
+
+  overflowY: "visible", // بدل auto
+  overflowX: "hidden",
+}}
     >
       {/* ── Background: beige + red lipstick kiss marks ── */}
       <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `url(${BackImage})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-        }}
-      />
+  style={{
+    position: "absolute",
+    inset: 0,
+    height: "100%",   // مهم
+    width: "100%",    // مهم
+    backgroundImage: `url(${BackImage})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+/>
 
   
 

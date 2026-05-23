@@ -473,7 +473,7 @@ export default function GiftPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="absolute inset-0 z-50 bg-[#fdfdfd] flex flex-col items-center justify-start md:justify-center overflow-hidden pt-10 md:pt-0"
+    className="absolute inset-0 z-50 bg-[#fdfdfd] flex flex-col items-center justify-center overflow-hidden "
     >
       <div className="absolute top-[-150px] w-[500px] h-[500px] bg-[#6fa8dc]/10 rounded-full blur-3xl" />
 
