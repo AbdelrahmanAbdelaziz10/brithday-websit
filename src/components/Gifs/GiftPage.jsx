@@ -473,7 +473,7 @@ export default function GiftPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="absolute inset-0 z-50 bg-[#fdfdfd] flex flex-col items-center justify-center overflow-hidden "
+      className="absolute inset-0 z-50 bg-[#fdfdfd] flex flex-col items-center justify-start md:justify-center overflow-hidden pt-10 md:pt-0"
     >
       <div className="absolute top-[-150px] w-[500px] h-[500px] bg-[#6fa8dc]/10 rounded-full blur-3xl" />
 
@@ -556,7 +556,7 @@ export default function GiftPage() {
               initial={{ y: -40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="text-[38px] md:text-[58px] font-extrabold text-[#2f5ea8] tracking-wide mb-16 drop-shadow-sm"
+              className="text-[38px] md:text-[58px] font-extrabold text-[#0b7598] tracking-wide mb-10 md:mb-16 drop-shadow-sm"
             >
               Gift for you 🎁
             </motion.h1>

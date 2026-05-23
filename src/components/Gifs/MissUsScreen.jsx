@@ -2,9 +2,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import BackImage from "../../assets/images/kiss.png";
 
+
+
 export default function MissUsScreen({ onBack }) {
   const [currentWord, setCurrentWord] = useState(0);
-
+const isMobile = window.innerWidth < 768;
   const words = ["I", "MISS", "US", "TOGETHER"];
 
   const photos = [
@@ -43,9 +45,8 @@ export default function MissUsScreen({ onBack }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-        padding: "120px ",
+justifyContent: isMobile ? "flex-start" : "center",
+padding: isMobile ? "80px 16px" : "120px",
         boxSizing: "border-box",
         fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
       }}
