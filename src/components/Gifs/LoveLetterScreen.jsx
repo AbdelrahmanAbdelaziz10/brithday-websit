@@ -15,7 +15,7 @@ export default function LoveLetterScreen({ onBack }) {
   const [showVideo, setShowVideo] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(0);
 
-  const videos = [MyVideo, MyVideoTwo];
+  const videos = [MyVideoTwo , MyVideo];
 
   const images = [Image1, Image2, Image3];
 
