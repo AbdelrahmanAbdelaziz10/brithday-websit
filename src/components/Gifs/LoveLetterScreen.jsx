@@ -252,19 +252,9 @@ export default function LoveLetterScreen({ onBack }) {
                     lineHeight: 1.7,
                   }}
                 >
-                  You are my calm,
-                  <br />
-                  my happiness,
-                  <br />
-                  and my favorite person.
-                  <br />
-                  I will always
-                  <br />
-                  choose you,
-                  <br />
-                  love you,
-                  <br />
-                  and stay beside you.
+                 كل سنه ونتي طيبة يا روح قلبي واتمني يكون عجبك الويب سيت وقدرن اسعدك وخليت اليوم دا ليكي يوم مميز，
+دمتي لي سكينتي وامني وملجئ الوحيد واتمني من الله ان يجعلني لكي الظل الذي تستظلين به واكون سبب في سعدتك وعند حسن ظنك ديما يارب.
+
                 </p>
               </div>
 
@@ -277,7 +267,7 @@ export default function LoveLetterScreen({ onBack }) {
                   repeat: Infinity,
                   duration: 1.8,
                 }}
-                className="absolute bottom-5 right-6 text-4xl"
+                className="absolute bottom-5 left-2 text-3xl"
               >
                 ❤️
               </motion.div>
