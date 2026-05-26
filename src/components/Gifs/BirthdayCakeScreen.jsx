@@ -64,7 +64,7 @@ export default function BirthdayCakeScreen({ onBack }) {
           animate={step >= 1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
           className="block text-white text-center drop-shadow-md"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(38px,7vw,68px)" , marginBottom: "3rem" }}
+          style={{ fontFamily: " cursive ,'Great Vibes'", fontSize: "clamp(38px,7vw,68px)" , marginBottom: "3rem" }}
         >
           Happy Birthday
         </motion.span>
@@ -73,7 +73,7 @@ export default function BirthdayCakeScreen({ onBack }) {
           animate={step >= 2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
           className="block text-white text-center drop-shadow-md my-2"
-          style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(38px,7vw,68px)", marginBottom: "3rem" }}
+          style={{ fontFamily: " cursive ,'Great Vibes'", fontSize: "clamp(38px,7vw,68px)", marginBottom: "3rem" }}
         >
           My Angel 💕
         </motion.span>
@@ -84,7 +84,7 @@ export default function BirthdayCakeScreen({ onBack }) {
         animate={step >= 3 ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.7 }}
         className="text-white text-center drop-shadow-md mb-5"
-        style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(30px,5.5vw,52px)" }}
+        style={{ fontFamily: " cursive ,'Great Vibes'", fontSize: "clamp(30px,5.5vw,52px)" }}
       >
         {blown ? "🎉 Happy Birthday! 🎉" : "Make a Wish ✨"}
       </motion.div>
@@ -159,7 +159,7 @@ export default function BirthdayCakeScreen({ onBack }) {
             <motion.button whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}
               onClick={blow} disabled={blown}
               className="px-12 py-3 rounded-full text-white font-bold text-xl tracking-widest border-2 border-white/60 bg-white/25 hover:bg-white/40 transition disabled:opacity-50"
-              style={{ fontFamily: "'Great Vibes', cursive" }}>
+              style={{ fontFamily: "cursive , 'Great Vibes'" }}>
               BLOW 🌬️
             </motion.button>
             <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.95 }}

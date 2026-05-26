@@ -7,7 +7,7 @@ import BackImage from "../../assets/images/kiss.png";
 export default function MissUsScreen({ onBack }) {
   const [currentWord, setCurrentWord] = useState(0);
 const isMobile = window.innerWidth < 868;
-  const words = ["I", "MISS", "US", "TOGETHER"];
+  const words = ["I", "Love", "You", "My Heart"];
 
   const photos = [
     {
@@ -106,7 +106,7 @@ const isMobile = window.innerWidth < 868;
               letterSpacing: "0.14em",
               color: "#fff",
               textShadow: "3px 3px 0 rgba(0,0,0,0.5), 0 0 30px rgba(0,0,0,0.25)",
-              textTransform: "uppercase",
+              // textTransform: "uppercase",
             }}
           >
             {words[currentWord]}

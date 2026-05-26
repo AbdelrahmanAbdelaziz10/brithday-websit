@@ -77,21 +77,20 @@ export default function MainPage() {
   </div>
 
   {/* Right Side */}
-  <div className="text-center text-white max-w-md w-full">
+  <div className="text-center text-white max-w-md w-full pt-10 md:pt-0">
 
     <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 drop-shadow-lg">
       Sara Enter Passcode ❤️
     </h2>
 
     <p className="text-base md:text-lg mb-8 md:mb-10 text-white/90 px-2 md:px-0">
-      The passcode is the Special Date between us (DDMMYY).
+      The passcode is the Special Date between us (DD/MM/YY).
     </p>
 
     {/* Passcode Box */}
-    <div className="mb-6 md:mb-0">
-      <PasscodeBox passcode={passcode} />
-    </div>
-
+<div className=" mb-6 md:mb-0">
+  <PasscodeBox passcode={passcode} />
+</div>
     {/* Keypad */}
     {!error && (
       <>

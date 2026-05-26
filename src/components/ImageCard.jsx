@@ -27,7 +27,22 @@ export default function ImageCard({ isUnlocked }) {
       <p className="text-center mt-6 text-gray-700 font-semibold text-lg">
         My Angel 💖
       </p>
-      {/* 🧸 Stitch */} <motion.img initial={{ scale: 0, rotate: -20 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 0.3 }} src="https://pngimg.com/uploads/stitch/stitch_PNG15.png" alt="stitch" className="w-38 absolute -bottom-17 -left-20 z-30 drop-shadow-xl" />
+      {/* 🧸 Stitch */}
+<motion.img
+  initial={{ scale: 0, rotate: -20 }}
+  animate={{ scale: 1, rotate: 0 }}
+  transition={{ delay: 0.3 }}
+  src="https://pngimg.com/uploads/stitch/stitch_PNG15.png"
+  alt="stitch"
+  className="
+    w-32 md:w-38
+    absolute
+    -bottom-14 md:-bottom-17
+    -left-8 md:-left-20
+    z-30
+    drop-shadow-xl
+  "
+/>
     </motion.div>
   );
 }
