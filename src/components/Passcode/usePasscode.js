@@ -5,7 +5,7 @@ export default function usePasscode() {
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [error, setError] = useState(false);
 
-  const correctPasscode = "230525";
+  const correctPasscode = "301025";
 
   const handleDelete = () => {
     if (isUnlocked) return;
