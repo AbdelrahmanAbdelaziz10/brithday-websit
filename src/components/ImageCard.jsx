@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import homeimage from "../assets/images/1.jpeg";
+import homeimage from "../assets/images/MS1_1.jpg";
 
 export default function ImageCard({ isUnlocked }) {
   return (
@@ -21,7 +21,7 @@ export default function ImageCard({ isUnlocked }) {
       <img
         src={homeimage}
         alt="memory"
-        className="w-[320px] h-[350px] object-cover rounded-md"
+        className="w-[400px] h-[380px] object-cover rounded-md"
       />
 
       <p className="text-center mt-6 text-gray-700 font-semibold text-lg">
