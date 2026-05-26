@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import Image1 from "../../assets/images/1.jpeg";
-import Image2 from "../../assets/images/2.jpeg";
+import Image1 from "../../assets/images/خروجة 1.jpeg";
+import Image2 from "../../assets/images/عيد ميلادي.jpeg";
 import Image3 from "../../assets/images/3.jpeg";
 
 export default function LoveLetterScreen({ onBack }) {
@@ -143,7 +143,7 @@ export default function LoveLetterScreen({ onBack }) {
                 snap-center
               "
             >
-              <div className="overflow-hidden rounded-sm h-[130px] lg:h-[150px]">
+              <div className="overflow-hidden rounded-sm h-[160px] lg:h-[170px]">
                 <img
                   src={img}
                   alt="memory"

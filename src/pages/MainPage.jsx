@@ -125,7 +125,7 @@ export default function MainPage() {
         </h2>
 
         <p className="text-white/80 mb-2 text-sm md:text-base">
-          خدي هنت (يوم مميز لينا)
+          خدي هنت ( بصي علي الصورة)
         </p>
 
         <button

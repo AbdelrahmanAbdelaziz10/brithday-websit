@@ -1,6 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import BackImage from "../../assets/images/kiss.png";
+import ImageOne from "../../assets/images/قراية فتحتنا 1.jpeg";
+import ImageTwo from "../../assets/images/الدهب 1.jpeg";
+import ImageThree from "../../assets/images/شبكتنا 1.jpeg";
 
 
 
@@ -11,21 +14,21 @@ const isMobile = window.innerWidth < 868;
 
   const photos = [
     {
-      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
-      title: "The first hello ♥",
-      date: "14.02.2023",
+      img: ImageOne,
+      title: "♥ قراية فتحتنا ",
+      date: "23.05.2025",
       rotate: "-8deg",
     },
     {
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop",
-      title: "The first vibe ♥",
-      date: "28.03.2023",
+      img: ImageTwo,
+      title: "♥ نشتري ذهبها",
+      date: "04.06.2025",
       rotate: "0deg",
     },
     {
-      img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=400&auto=format&fit=crop",
-      title: "The first us ♥",
-      date: "12.06.2023",
+      img: ImageThree,
+      title: "♥ شبكتها بدبلتي",
+      date: "30.10.2025",
       rotate: "7deg",
     },
   ];
